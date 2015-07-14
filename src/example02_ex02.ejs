@@ -1,0 +1,81 @@
+<% include assets/include/_header %>
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h2 class="panel-title">スライダー　スロットルーレットのようなループ</h2>
+		</div>
+		<div class="panel-body">
+			<p>
+				標準のループは最後のスライドの次に最初のスライドへ戻るだけですが、オプションの<code>rouletteLoop</code>を<code>true</code>にするとスロットルーレットのような一方向のループになります。<br>
+				スライドの切り替えを連続で行うと繋ぎ目あたりで少し変な動きになります。ここはうまいこと処理できないか考え中です。
+			</p>
+
+<div class="demo">
+	<script>
+	$(function(){
+		$('#example2_ex2').reSlider({
+			rouletteLoop: true
+		});
+	});
+	</script>
+	<div class="reSlider" id="example2_ex2">
+		<div class="reSlider-slide-container">
+			<div class="reSlider-slides">
+				<div class="reSlider-slide">
+					<img src="assets/img/image01.jpg" height="750" width="1000" alt="">
+				</div>
+				<div class="reSlider-slide">
+					<img src="assets/img/image02.jpg" height="619" width="1000" alt="">
+				</div>
+				<div class="reSlider-slide">
+					<img src="assets/img/image03.jpg" height="667" width="1000" alt="">
+				</div>
+				<div class="reSlider-slide">
+					<img src="assets/img/image04.jpg" height="662" width="1000" alt="">
+				</div>
+				<div class="reSlider-slide">
+					<img src="assets/img/image05.jpg" height="667" width="1000" alt="">
+				</div>
+			</div>
+		</div>
+		<button class="reSlider-prev">前へ</button>
+		<button class="reSlider-next">次へ</button>
+	</div>
+
+</div><!-- /.demo -->
+
+<pre class="code" data-ex-code-prettify-param="{codeType:'html'}">
+&lt;script&gt;
+$('#example2_ex2').reSlider({
+	loop: false
+});
+&lt;/script&gt;
+&lt;div class=&quot;reSlider&quot; id=&quot;example2_ex2&quot;&gt;
+	&lt;div class=&quot;reSlider-slide-container&quot;&gt;
+		&lt;div class=&quot;reSlider-slides&quot;&gt;
+			&lt;div class=&quot;reSlider-slide&quot;&gt;
+				&lt;img src=&quot;img/image01.jpg&quot; height=&quot;750&quot; width=&quot;1000&quot; alt=&quot;&quot;&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;reSlider-slide&quot;&gt;
+				&lt;img src=&quot;img/image02.jpg&quot; height=&quot;619&quot; width=&quot;1000&quot; alt=&quot;&quot;&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;reSlider-slide&quot;&gt;
+				&lt;img src=&quot;img/image03.jpg&quot; height=&quot;667&quot; width=&quot;1000&quot; alt=&quot;&quot;&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;reSlider-slide&quot;&gt;
+				&lt;img src=&quot;img/image04.jpg&quot; height=&quot;662&quot; width=&quot;1000&quot; alt=&quot;&quot;&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;reSlider-slide&quot;&gt;
+				&lt;img src=&quot;img/image05.jpg&quot; height=&quot;667&quot; width=&quot;1000&quot; alt=&quot;&quot;&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;button class=&quot;reSlider-prev&quot;&gt;前へ&lt;/button&gt;
+	&lt;button class=&quot;reSlider-next&quot;&gt;次へ&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+
+		</div>
+	</div>
+
+<% include assets/include/_footer %>

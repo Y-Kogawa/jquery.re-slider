@@ -1,0 +1,267 @@
+<% include assets/include/_header %>
+
+	<p>
+		スライダーを実装するプラグインです。<br>
+		これを元にカスタマイズすることを前提にしているため、機能やデザインはシンプルです。
+	</p>
+
+	<div class="panel panel-info">
+		<div class="panel-heading">
+			<h2 class="panel-title">File</h2>
+		</div>
+		<div class="panel-body">
+			<a href="https://github.com/Y-Kogawa/jquery.re-slider" target="_blank">gitHub Repository</a>
+		</div>
+	</div>
+
+	<div class="panel panel-info">
+		<div class="panel-heading">
+			<h2 class="panel-title">Read files</h2>
+		</div>
+		<div class="panel-body">
+<pre class="code" data-ex-code-prettify-param="{codeType:'html'}">
+&lt;link rel="stylesheet" href="assets/css/jquery.reSlider.css"&gt;
+&lt;script src=&quot;assets/js/jquery-1.11.2.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/js/jquery.reSlider.js&quot;&gt;&lt;/script&gt;
+</pre>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h2 class="panel-title">スライドショー</h2>
+		</div>
+		<div class="panel-body">
+			<ul>
+				<li><a href="example01.html">スライドショー　デフォルト</a></li>
+				<li><a href="example01_ex01.html">スライドショー　ループなし</a></li>
+				<li><a href="example01_ex02.html">スライドショー　スロットルーレットのようなループ</a></li>
+				<li><a href="example01_ex03.html">スライドショー　マウスオーバーでスライドショー停止</a></li>
+				<li><a href="example01_ex04.html">スライドショー　スライドショーの待機時間を変更する</a></li>
+				<li><a href="example01_ex05.html">スライドショー　初回のスライドショーが始まるまでの待機時間を設定</a></li>
+				<li><a href="example01_ex06.html">スライドショー　スライドの軸を変更</a></li>
+				<li><a href="example01_ex07.html">スライドショー　スライドの方向を変更</a></li>
+			</ul>
+
+			<section>
+				<h3>HTMLの基本形</h3>
+<pre class="code" data-ex-code-prettify-param="{codeType:'html'}">
+&lt;div class=&quot;reSlider&quot;&gt;
+	&lt;div class=&quot;reSlider-slide-container&quot;&gt;
+		&lt;div class=&quot;reSlider-slides&quot;&gt;
+			&lt;div class=&quot;reSlider-slide&quot;&gt;
+				&lt;img src=&quot;img/image01.jpg&quot; height=&quot;750&quot; width=&quot;1000&quot; alt=&quot;&quot;&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;reSlider-slide&quot;&gt;
+				&lt;img src=&quot;img/image02.jpg&quot; height=&quot;619&quot; width=&quot;1000&quot; alt=&quot;&quot;&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;reSlider-slide&quot;&gt;
+				&lt;img src=&quot;img/image03.jpg&quot; height=&quot;667&quot; width=&quot;1000&quot; alt=&quot;&quot;&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;reSlider-slide&quot;&gt;
+				&lt;img src=&quot;img/image04.jpg&quot; height=&quot;662&quot; width=&quot;1000&quot; alt=&quot;&quot;&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;reSlider-slide&quot;&gt;
+				&lt;img src=&quot;img/image05.jpg&quot; height=&quot;667&quot; width=&quot;1000&quot; alt=&quot;&quot;&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+			</section>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h2 class="panel-title">スライダー</h2>
+		</div>
+		<div class="panel-body">
+			<p>
+				操作ボタンを付けることでスライドの切り替えを操作することができるようになります。<br>
+				ボタンのデザインや配置はスタイルを作ってください。<br>
+				<code>.reSlider-prev</code> or <code>.reSlider-next</code>がついたものであればどんな要素でもトリガーになります。
+			</p>
+			<ul>
+				<li><a href="example02.html">スライダー　デフォルト</a></li>
+				<li><a href="example02_ex01.html">スライダー　ループなし</a></li>
+				<li><a href="example02_ex02.html">スライダー　スロットルーレットのようなループ</a></li>
+			</ul>
+
+			<section>
+				<h3>HTMLの基本形</h3>
+<pre class="code" data-ex-code-prettify-param="{codeType:'html'}">
+&lt;div class=&quot;reSlider&quot;&gt;
+	&lt;div class=&quot;reSlider-slide-container&quot;&gt;
+		&lt;div class=&quot;reSlider-slides&quot;&gt;
+			&lt;div class=&quot;reSlider-slide&quot;&gt;
+				&lt;img src=&quot;img/image01.jpg&quot; height=&quot;750&quot; width=&quot;1000&quot; alt=&quot;&quot;&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;reSlider-slide&quot;&gt;
+				&lt;img src=&quot;img/image02.jpg&quot; height=&quot;619&quot; width=&quot;1000&quot; alt=&quot;&quot;&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;reSlider-slide&quot;&gt;
+				&lt;img src=&quot;img/image03.jpg&quot; height=&quot;667&quot; width=&quot;1000&quot; alt=&quot;&quot;&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;reSlider-slide&quot;&gt;
+				&lt;img src=&quot;img/image04.jpg&quot; height=&quot;662&quot; width=&quot;1000&quot; alt=&quot;&quot;&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;reSlider-slide&quot;&gt;
+				&lt;img src=&quot;img/image05.jpg&quot; height=&quot;667&quot; width=&quot;1000&quot; alt=&quot;&quot;&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;button class=&quot;reSlider-prev&quot;&gt;前へ&lt;/button&gt;
+	&lt;button class=&quot;reSlider-next&quot;&gt;次へ&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+			</section>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h2 class="panel-title">Example3</h2>
+		</div>
+		<div class="panel-body">
+			<p>
+				オプションの指定をしないで使用したときの動きです。
+			</p>
+
+<div class="demo">
+	<script>
+	$(function(){
+		$('#example3').reSlider();
+	});
+	</script>
+	<div class="reSlider" id="example3">
+		<div class="reSlider-slide-container">
+			<div class="reSlider-slides">
+				<div class="reSlider-slide">
+					<img src="assets/img/image01.jpg" height="750" width="1000" alt="">
+				</div>
+				<div class="reSlider-slide">
+					<img src="assets/img/image02.jpg" height="619" width="1000" alt="">
+				</div>
+				<div class="reSlider-slide">
+					<img src="assets/img/image03.jpg" height="667" width="1000" alt="">
+				</div>
+				<div class="reSlider-slide">
+					<img src="assets/img/image04.jpg" height="662" width="1000" alt="">
+				</div>
+				<div class="reSlider-slide">
+					<img src="assets/img/image05.jpg" height="667" width="1000" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="reSlider-thumbnail-container">
+			<div class="reSlider-thumbnail-list">
+				<div class="reSlider-thumbnail-box">
+					<img src="assets/img/image01.jpg" height="750" width="1000" alt="">
+					<div class="reSlider-thumbnail-mask"></div>
+				</div>
+				<div class="reSlider-thumbnail-box">
+					<img src="assets/img/image02.jpg" height="619" width="1000" alt="">
+					<div class="reSlider-thumbnail-mask"></div>
+				</div>
+				<div class="reSlider-thumbnail-box">
+					<img src="assets/img/image03.jpg" height="667" width="1000" alt="">
+					<div class="reSlider-thumbnail-mask"></div>
+				</div>
+				<div class="reSlider-thumbnail-box">
+					<img src="assets/img/image04.jpg" height="662" width="1000" alt="">
+					<div class="reSlider-thumbnail-mask"></div>
+				</div>
+				<div class="reSlider-thumbnail-box">
+					<img src="assets/img/image05.jpg" height="667" width="1000" alt="">
+					<div class="reSlider-thumbnail-mask"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!-- /.demo -->
+
+<pre class="code" data-ex-code-prettify-param="{codeType:'html'}">
+&lt;script&gt;
+$(function(){
+	$('#example3').reSlider();
+});
+&lt;/script&gt;
+&lt;div class=&quot;samplslider&quot;&gt;
+	&lt;div class=&quot;reSlider-slide-container&quot;&gt;
+		&lt;div class=&quot;reSlider-slides&quot;&gt;
+			&lt;div class=&quot;reSlider-slide&quot;&gt;
+				&lt;img src=&quot;img/image01.jpg&quot; height=&quot;750&quot; width=&quot;1000&quot; alt=&quot;&quot;&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;reSlider-slide&quot;&gt;
+				&lt;img src=&quot;img/image02.jpg&quot; height=&quot;619&quot; width=&quot;1000&quot; alt=&quot;&quot;&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;reSlider-slide&quot;&gt;
+				&lt;img src=&quot;img/image03.jpg&quot; height=&quot;667&quot; width=&quot;1000&quot; alt=&quot;&quot;&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;reSlider-slide&quot;&gt;
+				&lt;img src=&quot;img/image04.jpg&quot; height=&quot;662&quot; width=&quot;1000&quot; alt=&quot;&quot;&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;reSlider-slide&quot;&gt;
+				&lt;img src=&quot;img/image05.jpg&quot; height=&quot;667&quot; width=&quot;1000&quot; alt=&quot;&quot;&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;reSlider-thumbnail-container&quot;&gt;
+		&lt;div class=&quot;reSlider-thumbnail-list&quot;&gt;
+			&lt;div class=&quot;reSlider-thumbnail-box&quot;&gt;
+				&lt;img src=&quot;img/image01.jpg&quot; height=&quot;750&quot; width=&quot;1000&quot; alt=&quot;&quot;&gt;
+				&lt;div class=&quot;reSlider-thumbnail-mask&quot;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;reSlider-thumbnail-box&quot;&gt;
+				&lt;img src=&quot;img/image02.jpg&quot; height=&quot;619&quot; width=&quot;1000&quot; alt=&quot;&quot;&gt;
+				&lt;div class=&quot;reSlider-thumbnail-mask&quot;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;reSlider-thumbnail-box&quot;&gt;
+				&lt;img src=&quot;img/image03.jpg&quot; height=&quot;667&quot; width=&quot;1000&quot; alt=&quot;&quot;&gt;
+				&lt;div class=&quot;reSlider-thumbnail-mask&quot;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;reSlider-thumbnail-box&quot;&gt;
+				&lt;img src=&quot;img/image04.jpg&quot; height=&quot;662&quot; width=&quot;1000&quot; alt=&quot;&quot;&gt;
+				&lt;div class=&quot;reSlider-thumbnail-mask&quot;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;reSlider-thumbnail-box&quot;&gt;
+				&lt;img src=&quot;img/image05.jpg&quot; height=&quot;667&quot; width=&quot;1000&quot; alt=&quot;&quot;&gt;
+				&lt;div class=&quot;reSlider-thumbnail-mask&quot;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+		</div>
+	</div>
+
+	<div class="panel panel-success">
+		<div class="panel-heading">
+			<h2 class="panel-title">Option</h2>
+		</div>
+		<div class="panel-body">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Value</th>
+						<th>Initial value</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>xxx</th>
+						<td>Strong（文字列）</td>
+						<td>xxx</td>
+						<td>
+							xxx
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+<% include assets/include/_footer %>
